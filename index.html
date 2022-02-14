@@ -6,11 +6,30 @@
     <link rel="stylesheet" href="./dist/style.css" />
     <title>How's the weather?</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header flex flex-jc-c flex-ai-c">
+      <img src="./images/10587358431548329956.svg" alt="icon" />
+      <h1 id="name">Wheatherify</h1>
+    </header>
+    <div class="bg"></div>
+    <main class="container flex flex-jc-c flex-ai-c">
+      <div class="intro">
+        <h1>Hey, let's see how's the weather today</h1>
+        <input
+          class="cityInput"
+          type="text"
+          placeholder="Enter your city and press Enter"
+        />
+        <p class="waitText">Please Wait...</p>
+      </div>
+      <div class="data display-none"></div>
+      <i class="fa fa-github" style="font-size: 36px"></i>
+    </main>
+  </body>
   <script
     language="JavaScript"
     src="http://www.geoplugin.net/javascript.gp"
     type="text/javascript"
   ></script>
-  <script src="./app/js/main.js"></script>
+  <script type="module" src="./app/js/main.js"></script>
 </html>
