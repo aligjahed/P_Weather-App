@@ -1,5 +1,5 @@
 // importing anime.js library
-import anime from "animejs/lib/anime.es.js";
+import anime from "animejs";
 
 // Html calls
 const cityInput = document.querySelector(".cityInput");
