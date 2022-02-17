@@ -14,7 +14,7 @@ const name = document.getElementById("name");
 const latApiAddress = "https://api.openweathermap.org/data/2.5/weather?q=";
 const weatherApiUrl = "https://api.openweathermap.org/data/2.5/onecall?";
 const weatherApiKey = "&APPID=b09b4322a8477f712bb774a70f927f69";
-const iconApi = "http://openweathermap.org/img/wn/";
+const iconApi = "https://openweathermap.org/img/wn/";
 let lat = "";
 let lon = "";
 let data = "";
@@ -97,19 +97,15 @@ const getData = async (req) => {
     lat = latData.coord.lat;
     lon = latData.coord.lon;
     userCity = latData.name;
-    console.log(latData);
 
     const res = await fetch(
       weatherApiUrl + "lat=" + lat + "&lon=" + lon + weatherApiKey
     );
     data = await res.json();
-    console.log(data);
 
     waitText.style.display = "none";
     Fadeout(".intro");
     intro.classList.add("display-none");
-    console.log(data.daily);
-    console.log(Math.round(parseInt(data.current.temp) - 273));
 
     showData(data.daily, data.current);
     dataTab.classList.remove("display-none");
